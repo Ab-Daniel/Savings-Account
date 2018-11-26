@@ -14,11 +14,17 @@ public class SavingsAccount extends BankAccount
 	public void addIntrest()
 	{
 		
-		
+		balance = balance + (minBalance * rate);
+		minBalance = balance;
 		
 	}
 	
-	
+	public String toString()
+	{
+		
+		
+		
+	}
 	
 	private double minBalance = 2000;
 	
