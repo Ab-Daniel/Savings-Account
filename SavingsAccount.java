@@ -19,15 +19,22 @@ public class SavingsAccount extends BankAccount
 		
 	}
 	
-	public String toString()
+	public void withdraw(double aAmount)
 	{
 		
-		
+		balance = balance - aAmount;
 		
 	}
 	
-	private double minBalance = 2000;
+	public String toString()
+	{
+		
+		return 
+		
+	}
 	
-	private double rate = 4;
+	private double minBalance;
+	
+	private double rate;
 	
 }
