@@ -29,7 +29,7 @@ public class SavingsAccount extends BankAccount
 	public String toString()
 	{
 		
-		return 
+		return "Balance: " + String.format("$%1.2f", balance);
 		
 	}
 	
