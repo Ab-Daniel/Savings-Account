@@ -9,19 +9,21 @@ public class SavingsAccount extends BankAccount
 		
 		rate = aRate;
 		
+		balance = minBalance;
+		
 	}
 	
 	public void addIntrest()
 	{
 		
-		balance = balance + (minBalance * rate);
+		balance = balance + (minBalance * (rate/100));
 		minBalance = balance;
-		
 	}
 	
-	public void withdraw(double aAmount)
+	public void withdrawButBetter(double aAmount)
 	{
 		
+		minBalance = balance - aAmount;
 		balance = balance - aAmount;
 		
 	}
@@ -29,7 +31,7 @@ public class SavingsAccount extends BankAccount
 	public String toString()
 	{
 		
-		return "Balance: " + String.format("$%1.2f", balance);
+		return "Balance: " + String.format("$%1.2f", balance) + "  Rate: " + String.format("%1.2f", rate) + "  Minimum Balance: " + String.format("$%1.2f", minBalance);
 		
 	}
 	
